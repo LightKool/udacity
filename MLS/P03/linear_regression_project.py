@@ -47,10 +47,10 @@ C = [[1],
      [3]]
 
 #TODO 创建一个 4*4 单位矩阵
-I = [[1,1,1,1],
-     [1,1,1,1],
-     [1,1,1,1],
-     [1,1,1,1]]
+I = [[1,0,0,0],
+     [0,1,0,0],
+     [0,0,1,0],
+     [0,0,0,1]]
 
 
 # ## 1.2 返回矩阵的行数和列数
@@ -220,8 +220,6 @@ get_ipython().magic(u'run -i -e test.py LinearRegressionTestCase.test_scaleRow')
 # TODO r1 <--- r1 + r2*scale
 # 直接修改参数矩阵，无返回值
 def addScaledRow(M, r1, r2, scale):
-    if scale is 0:
-        raise ValueError("scale can not equal to zero")
     M[r1] = [x+y for x,y in zip(M[r1], [r * scale for r in M[r2]])]
 
 
